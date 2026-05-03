@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - VVIT College</title>
+    <link rel="stylesheet" href="login.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="home\vvitlogo.jpeg" alt="VVIT College Logo" width="150" height="150"> <!-- Replace with the path to your logo -->
+        </div>
+        <h2>Login</h2>
+        <!-- Redirects to dashboard.html on submit -->
+            <div class="input-group">
+                <label for="rollno">Roll Number:</label>
+                <input type="text" id="rollno" name="rollno" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <input type="checkbox" id="remember-me" name="remember-me">
+                <label for="remember-me">Remember Me</label>
+            </div>
+            <button type="submit">Login</button>
+            </form>
+    </div>
+ <script>
+        // Simulated login functionality
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get values from input fields
+            const rollno = document.getElementById('rollno').value;
+            const password = document.getElementById('password').value;
+
+            // Simulate authentication (replace this with actual authentication logic)
+            if (rollno === '12345' && password === 'password') {
+                // Redirect to dashboard if login is successful
+                window.location.href = 'logindashboard.html';
+            } else {
+                alert('Invalid roll number or password. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
